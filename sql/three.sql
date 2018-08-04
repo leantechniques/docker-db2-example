@@ -1,0 +1,1 @@
+SELECT 'Hello from three.sql' FROM SYSIBM.DUAL;

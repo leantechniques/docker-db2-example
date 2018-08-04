@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db2:
+    build: ./docker/
+    container_name: db2
+    ports:
+    - "50000:50000"
+    environment:
+    - DB2INST1_PASSWORD=db2inst1-pwd
+    - LICENSE=accept
+    volumes:
+    # Path on the host, relative to the Compose file
+    - ./sql:/home/db2inst1/sql
+    command: db2start
